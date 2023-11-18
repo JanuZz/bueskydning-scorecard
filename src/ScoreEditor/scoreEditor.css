@@ -1,0 +1,112 @@
+.score-editor {
+  margin: 1rem;
+  margin-top: 4rem;
+  flex-grow: 1;
+  font-size: 1.8rem;
+  table-layout: fixed;
+  width: auto;
+
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+}
+
+table {
+  transition: all 0.2s ease-in-out;
+  width: 100%;
+  overflow: hidden;
+  border-radius: 1rem;
+  border-collapse: collapse;
+  flex-grow: 1;
+  outline: 2px solid rgba(0, 0, 0, 0.2);
+  user-select: none;
+  min-height: 2rem;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+}
+
+table:focus {
+  outline: 2px solid rgba(50, 132, 200, 1);
+  transform: scale(102%) rotate(0.5deg);
+  box-shadow: 0 0 1rem rgba(50, 132, 200, 0.5);
+}
+
+thead {
+  background-color: rgba(50, 132, 200, 0.5);
+  color: White;
+  font-weight: bold;
+}
+
+thead > td {
+  padding: 0.4rem;
+}
+
+th,
+td {
+	font-size: 2.5rem !important;
+  text-align: center;
+}
+
+/* First column */
+tr > td:first-child,
+thead > td:first-child {
+  padding: 0 1rem;
+  text-align: left;
+}
+
+tr:nth-child(even) {
+  background-color: rgba(0, 0, 0, 0.1);
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+  border-top: 1px solid rgba(0, 0, 0, 0.3);
+}
+
+.row {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.handicap {
+  opacity: 0.5;
+}
+
+.score-editor:hover .arrow-scores {
+	transform: translateY(0);
+	opacity: 1
+}
+
+.arrow-scores {
+	transition: all 0.2s ease-in-out;
+  margin-top: 2rem;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+
+	transform: translateY(-100%);
+	opacity: 0;
+}
+
+.arrow-scores > span {
+  cursor: pointer;
+  outline: 5px solid rgba(0, 0, 0, 0.1);
+  outline-offset: -5px;
+  height: 4.5rem;
+  width: 4.5rem;
+  border-radius: 3rem;
+  position: relative;
+  transition: all 0.2s ease-in-out;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.2);
+}
+
+.arrow-scores > span:hover {
+  transform: scale(110%) rotate(10deg);
+}
+
+.arrow-scores > span > p {
+  position: absolute;
+  left: 50%;
+	top: 50%;
+  transform: translate(-50%, -125%);
+}

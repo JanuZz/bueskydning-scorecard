@@ -1,0 +1,38 @@
+.modal {
+	z-index: 1000;
+	position: absolute;
+}
+
+.modal::backdrop {
+	background: rgba(0, 0, 0, 0.5);
+
+}
+
+.modal > .backdrop {
+	transition: opacity 0.2s ease-in-out;
+	opacity: 0;
+	
+	position: fixed;
+	display: block;
+	background-color: rgba(0, 0, 0, 0.2);
+	
+	/* Blue things below */
+	backdrop-filter: blur(0.5rem);
+
+	top: 0;
+	left: 0;
+	width: 100vw;
+	height: 100vh;
+}
+
+.modal-content {
+	width: 60vw;
+	transition: all 0.3s ease-in-out;
+
+	display: block;
+	background: white;
+	padding: 1rem;
+
+	position: fixed;
+	left: 50%;
+}

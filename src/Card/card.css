@@ -1,0 +1,43 @@
+.card {
+	height: calc(100% - 3rem);
+
+	display: flex;
+	flex-direction: column;
+	gap: 2rem;
+	justify-items: center;
+	color: black;
+
+	padding: 3rem;
+	padding-top: 1rem;
+}
+
+.placeholder {
+	opacity: 0.4;
+}
+
+.header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+}
+
+.card-toolbar {
+	display: flex;
+	flex-direction: row-reverse;
+	gap: 1rem;
+}
+
+.card-toolbar > span {
+	padding: 0.2rem;
+	font-size: 1.5rem;
+	cursor: pointer;
+}
+
+.card-toolbar > span:hover > svg {
+	fill: rgba(255, 0, 0, 0.556)
+}
+
+.card-toolbar > span > svg {
+	transition: all 0.2s ease-in-out;
+}

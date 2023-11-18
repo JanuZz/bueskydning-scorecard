@@ -1,13 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Color+Emoji&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Archivo+Black&display=swap');
+
 body {
   margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  padding: 0;
+  font-family: sans-serif;
+  min-height: 100vh;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+h1,
+h2,
+h3 {
+  font: 2.8rem 'Archivo Black', sans-serif;
+  font-weight: bolder;
+}
+
+p {
+  font: 1rem 'Archivo Black', sans-serif;
+	font-size: 1.5rem;
+}
+
+div#root {
+  height: 100vh;
+}
+
+div.container {
+  height: calc(100vh - 10rem);
+  padding: 5rem;
+
+  /* Split into grid that is 1x? depinding on an attribute */
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(25rem, 1fr));
+  grid-gap: 5rem;
+}
+
+div.container > * {
+  display: block;
+  flex-grow: 1;
+}
+
+.emoji {
+  font: 2rem 'Noto Color Emoji', sans-serif;
+}
+
+.border {
+  border-radius: 1rem;
+  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.1);
+  border: 2px solid rgba(0, 0, 0, 0.1);
+}
+
+.toolbar {
+  position: fixed;
+	display: flex;
+	flex-direction: row;
+	gap: 1rem;
+  top: 1rem;
+  right: 1rem;
+  height: 1rem;
+	font-size: 1.5rem;
+}
+
+.tool {
+	padding: 0.5rem;
+  padding: 1rem;
+  width: 1rem;
+  height: 1rem;
+  border-radius: 4rem;
+  background: rgba(50, 132, 200, 1);
+  cursor: pointer;
+  aspect-ratio: 1;
+  box-shadow: 0.25rem 0.25rem 1rem rgba(0, 0, 0, 0.2);
+}
+
+.tool > svg {
+	fill: rgb(255, 255, 255, 0.7);
+  transform: translate(-0.17rem, -0.25rem);
 }
