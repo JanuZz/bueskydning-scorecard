@@ -1,6 +1,8 @@
 # Archery Scorecard
 Manage your archery competetions with simple scorecards that keep track of your scores with a given "handicap" modifier.
 
+To access it, either use the [offline release](https://github.com/JanuZz/bueskydning-scorecard/releases/tag/v1.0.0), or just use the [online version](https://januzz.github.io/bueskydning-scorecard/)
+
 ![image](https://github.com/JanuZz/bueskydning-scorecard/assets/72662150/a04f8bb4-0381-4fbb-8933-bd932ab80fda)
 ![image](https://github.com/JanuZz/bueskydning-scorecard/assets/72662150/2b1c4ccd-e16a-45b5-bf39-18602f7c9699)
 
